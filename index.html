@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Pour les icônes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferme Pédagogique</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+<script>
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+</script>
+
+<!-- En-tête -->
+<header id="header-section" class="header">
+    <!-- Début: Informations au-dessus de l'en-tête -->
+    <div id="above-header" class="header-above-info">
+        <div class="header-widget">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-left text-center">
+                        <div class="contact-wrapper">
+                            <!-- Icônes des réseaux sociaux -->
+                            <aside class="widget widget_social_widget">
+                                <ul>
+                                    <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a></li>
+                                </ul>
+                            </aside>
+                            <!-- Informations de contact -->
+                            <div class="contact-details">
+                                <aside class="widget widget-contact"><div class="contact-area">
+                                        <div class="contact-icon"><i class="fa fa-clock-o"></i></div>
+                                        <a href="javascript:void(0)" class="contact-info">
+                                            <span class="text">9h00 - 20h00</span>
+                                            <span class="title">Tous les jours sauf lundi</span>
+                                        </a>
+                                    </div>
+                                </aside>
+                                <aside class="widget widget-contact">
+                                    <div class="contact-area">
+                                        <div class="contact-icon"><i class="fa fa-envelope"></i></div> <!-- Changer l'icône ici -->
+                                        <a href="mailto:youremail@example.com" class="contact-info"> <!-- Assurez-vous que le lien est correct -->
+                                            <span class="text">Email</span>
+                                            <span class="title">fermepeda@.co</span>
+                                        </a>
+                                    </div>
+                                </aside>
+                                <aside class="widget widget-contact">
+                                    <div class="contact-area">
+                                        <div class="contact-icon"><i class="fa fa-phone"></i></div> <!-- Icône de téléphone -->
+                                        <a href="tel:+212123456789" class="contact-info">
+                                            <span class="text">Appelez-nous</span>
+                                            <span class="title">(+212) 00-000-00</span>
+                                        </a>
+                                    </div>
+                                </aside>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Début: Menu principal -->
+
+<!-- Fin: Menu principal -->
+
+
+</header>
+<script>
+    // Ajouter une écouteur d'événement de défilement
+    window.addEventListener('scroll', function() {
+        const headerAbove = document.getElementById('above-header');
+        if (window.scrollY > 50) { // Ajustez la valeur selon vos besoins
+            headerAbove.classList.add('scrolled');
+        } else {
+            headerAbove.classList.remove('scrolled');
+        }
+    });
+</script>
+<style>
+    /* Couleur verte pour l'élément actif "Accueil" */
+    .navbar .nav .active2 {
+        color: #abc233;
+    }
+
+    /* Style de base pour la barre de navigation */
+    .navbar {
+        background-color: #fff;
+        width: 100%;
+        padding: 10px 20px;
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    /* Style pour le conteneur de la barre de navigation */
+    .navbar .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* Style pour le logo */
+    .navbar .logo img {
+        height: 50px;
+    }
+
+    /* Style pour la liste de navigation */
+    .navbar .nav {
+        list-style-type: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Style pour chaque élément de navigation */
+    .navbar .nav li {
+        margin-left: 20px;
+    }
+
+    /* Style pour les liens de navigation */
+    .navbar .nav a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        padding: 8px 12px;
+        transition: color 0.3s;
+    }
+
+    /* Changement de couleur au survol */
+    .navbar .nav a:hover {
+        color: #abc233;
+    }
+
+    /* Style pour la navbar fixe */
+    .fixed-navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+</style>
+</head>
+
+
+<nav class="navbar">
+    <div class="container">
+        <div class="logo">
+            <a href="#">
+                <img src="images/logojardine.png" alt="Logo" >
+            </a>
+        </div>
+
+        <ul class="nav">
+            <li><a href="index.html" class="active2">Accueil</a></li>
+            <li><a href="#about">Qui Sommes Nous</a></li>
+            <li><a href="#activities">Activités</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a data-toggle="modal" data-target="#reservationModalWithGarden" href="#">Réservation</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<script>
+    // Activer la classe 'fixed-navbar' lors du défilement
+    window.addEventListener('scroll', function () {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('fixed-navbar');
+        } else {
+            navbar.classList.remove('fixed-navbar');
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Modale de réservation pour un jardin avec choix de date -->
+<div class="modal fade" id="reservationModalWithGarden" tabindex="-1" role="dialog" aria-labelledby="reservationModalWithGardenLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="images/logojardine.png" height="50" width="50" alt="Logo Jardin" style="margin-right: 10px;">
+                <h5 class="modal-title" id="reservationModalWithGardenLabel">Réservation du Jardin</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="confirmationMessageWithGarden" class="alert alert-success" style="display:none;"></div>
+                <form id="reservationFormWithGarden">
+                    <div class="form-group">
+                        <label for="reservationDate">Date de Réservation</label>
+                        <input type="date" class="form-control" id="reservationDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nameWithGarden">Nom</label>
+                        <input type="text" class="form-control" id="nameWithGarden" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailWithGarden">Email</label>
+                        <input type="email" class="form-control" id="emailWithGarden" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneWithGarden">Téléphone</label>
+                        <input type="tel" class="form-control" id="phoneWithGarden" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="numberOfPeople">Nombre de personnes</label>
+                        <input type="number" class="form-control" id="numberOfPeople" min="1" value="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="totalCost">Coût total (30 DH par personne)</label>
+                        <input type="text" class="form-control" id="totalCost" value="30 DH" readonly>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Soumettre</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Code JavaScript pour la génération du PDF et le calcul du coût -->
+<script>
+    document.getElementById("numberOfPeople").addEventListener("input", function () {
+        const numberOfPeople = document.getElementById("numberOfPeople").value;
+        const costPerPerson = 30;
+        const totalCost = numberOfPeople * costPerPerson;
+        document.getElementById("totalCost").value = `${totalCost} DH`;
+    });
+
+    document.getElementById("reservationFormWithGarden").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById("nameWithGarden").value;
+        const email = document.getElementById("emailWithGarden").value;
+        const phone = document.getElementById("phoneWithGarden").value;
+        const date = document.getElementById("reservationDate").value;
+        const numberOfPeople = document.getElementById("numberOfPeople").value;
+        const totalCost = document.getElementById("totalCost").value;
+
+        const qrContent = `Nom: ${name}, Date: ${date}, Nombre de personnes: ${numberOfPeople}, Coût: ${totalCost}`;
+        const qrCodeCanvas = document.createElement("canvas");
+
+        new QRCode(qrCodeCanvas, {
+            text: qrContent,
+            width: 100,
+            height: 100
+        });
+
+        const qrCodeImage = qrCodeCanvas.toDataURL("image/png");
+
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF();
+
+        const logoURL = "images/logojardine.png";
+        pdf.addImage(logoURL, "PNG", 10, 10, 30, 30);
+
+        pdf.setFontSize(18);
+        pdf.text("Carte d'Entrée - Jardin", 10, 50);
+        pdf.setFontSize(12);
+        pdf.text(`Nom: ${name}`, 10, 70);
+        pdf.text(`Email: ${email}`, 10, 80);
+        pdf.text(`Téléphone: ${phone}`, 10, 90);
+        pdf.text(`Date Réservée: ${date}`, 10, 100);
+        pdf.text(`Nombre de personnes: ${numberOfPeople}`, 10, 110);
+        pdf.text(`Coût total: ${totalCost}`, 10, 120);
+
+        const qrSize = 40;
+        pdf.addImage(qrCodeImage, "PNG", 140, 70, qrSize, qrSize);
+
+        pdf.setFontSize(10);
+        pdf.text("Merci d'apporter cette carte pour accéder au jardin.", 10, 140);
+
+        pdf.save(`Carte_Entree_Jardin_${name}.pdf`);
+
+        document.getElementById("confirmationMessageWithGarden").style.display = "block";
+        document.getElementById("confirmationMessageWithGarden").innerText = "Votre carte d'entrée a été générée et téléchargée.";
+
+        setTimeout(() => {
+            $('#reservationModalWithGarden').modal('hide');
+        }, 2000);
+    });
+</script>
+
+
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JavaScript -->
+<script>
+    document.getElementById('reservationFormWithActivities').addEventListener('submit', function(event) {
+        event.preventDefault(); // Empêche le rechargement de la page
+
+        // Récupération des valeurs des champs
+        const activity = document.getElementById('activitySelect').value;
+        const name = document.getElementById('nameWithActivities').value;
+        const email = document.getElementById('emaillWithActivities').value;
+        const phone = document.getElementById('phoneWithActivities').value;
+        const date = document.getElementById('dateWithActivities').value;
+
+        // Affichage du message de confirmation au-dessus du formulaire
+        const confirmationMessage = document.getElementById('confirmationMessageWithActivities');
+        confirmationMessage.style.display = 'block'; // Rendre le message visible
+        confirmationMessage.innerHTML = `Merci <strong>${name}</strong>, votre réservation pour l'activité <strong>${activity}</strong> le <strong>${date}</strong> a été soumise avec succès. Nous vous contacterons bientôt à <strong>${email}</strong>.`;
+
+        // Réinitialise le formulaire
+        this.reset();
+    });
+</script>
+
+
+
+
+<!-- Bannière principale -->
+<section class="banner">
+    <div class="banner-content text-left">
+        <h3 data-animation="fadeInUp" data-delay="150ms" style="animation-delay: 150ms; opacity: 1;" class="animated fadeInUp">La ferme pédagogique</h3>
+        
+        <h1 data-animation="fadeInLeft" data-delay="200ms" style="animation-delay: 200ms; opacity: 1;" class="animated fadeInLeft"><span class="primary-color">Equipée pour accueillir </span></h1>
+        
+        <p data-animation="fadeInLeft" data-delay="500ms" style="animation-delay: 500ms; opacity: 1;" class="animated fadeInLeft">
+            Découvrez une expérience unique où petits et grands s'épanouissent au cœur de la nature. Les enfants apprennent en s'amusant, et les adultes profitent de la sérénité de la ferme.
+        </p>
+
+
+        <a data-toggle="modal" data-target="#reservationModalWithGarden" data-animation="fadeInUp" data-delay="800ms" href="#" class="av-btn av-btn-primary animated fadeInUp" style="animation-delay: 800ms; opacity: 1;">
+            <div class="btn-text"><span>R</span><span>é</span><span>s</span><span>e</span><span>r</span><span>v</span><span>e</span><span>r</span></div>
+        </a>
+
+    </div>
+</section>
+
+
+
+
+
+<div id="info-section" class="info-section">
+    <div class="av-container">
+        <div class="av-columns-area">
+            <div class="av-column-12">
+                <ul class="info-wrapper">
+                    <li class="info-item">
+                        <aside class="widget widget-contact">
+                            <div class="contact-area">
+                                <div class="contact-icon">
+                                    <i class="fa fa-clock-o"></i>
+                                </div>
+                                <a href="#" class="contact-info">
+                                    <span class="text">Horaires d'ouvertures</span>
+                                    <span class="title">Chaque jours sauf lundi 09:00-20:00</span>
+                                </a>
+                            </div>
+                        </aside>
+                    </li>
+                    <li class="info-item">
+                        <aside class="widget widget-contact">
+                            <div class="contact-area">
+                                <div class="contact-icon">
+                                    <i class="fa fa-home"></i>
+                                </div>
+                                <a href="#" class="contact-info">
+                                    <span class="text">Notre emplacement</span>
+                                    <span class="title"> Rabat, Maroc</span>
+                                </a>
+                            </div>
+                        </aside>
+                    </li>
+                    <li class="info-item">
+                        <aside class="widget widget-contact">
+                            <div class="contact-area">
+                                <div class="contact-icon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <a href="#" class="contact-info">
+                                    <span class="text">Réserver maintenant</span>
+                                    <span class="title">(+212) 0633-000066</span>
+                                </a>
+                            </div>
+                        </aside>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Section À propos moderne -->
+<section class="about-modern" id="about">
+    <div class="container">
+        <div class="content">
+            <h2>Qui sommes-nous</h2>
+            <p>Bienvenue à la <strong>Ferme Pédagogique</strong>, un lieu où les petits et les grands peuvent se reconnecter avec la nature. Nous offrons une expérience d'apprentissage interactive, permettant aux visiteurs de découvrir la vie à la ferme tout en s'amusant. Ici, vous pouvez explorer notre environnement naturel, participer à des ateliers pratiques, et comprendre l'importance de l'agriculture durable. Rejoignez-nous pour une aventure enrichissante et mémorable au cœur de la nature.</p>
+            <p>Pour en savoir plus sur notre équipe, consultez notre section <a href="about.html">Qui sommes-nous</a></p>
+        </div>
+    </div>
+</section>
+
+
+<!-- Section des hébergements populaires -->
+<section class="activities my-5" id="activities">
+    <div class="container">
+        <h2 class="text-center mb-4">Nos Activités </h2>
+        <div id="activitySlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+                <!-- Diapositive 1 -->
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <!-- Card 1 -->
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="card border-0 shadow-lg">
+                                <div class="img-container">
+                                    <a href="details-visite-guidee.html" target="_blank">
+                                        <img src="images/ferme2.jpg" class="card-img-top" alt="Visite Guidée">
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Visite Guidée de la Ferme</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="card border-0 shadow-lg">
+                                <div class="img-container">
+                                    <a href="details-recolte.html" target="_blank">
+                                        <img src="images/photo.jpg" class="card-img-top" alt="Récolte de Fruits">
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Randonnées à Cheval</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="card border-0 shadow-lg">
+                                <div class="img-container">
+                                    <a href="details-soins-animaux.html" target="_blank">
+                                        <img src="images/animeux.jpg" class="card-img-top" alt="Soins aux Animaux">
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Soins aux Animaux</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Diapositive 2 -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <!-- Card 4 -->
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="card border-0 shadow-lg">
+                                <div class="img-container">
+                                    <a href="details-fabrication-pain.html" target="_blank">
+                                        <img src="images/pain.jpeg" class="card-img-top" alt="Fabrication de Pain">
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Atelier de Fabrication de Pain</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="card border-0 shadow-lg">
+                                <div class="img-container">
+                                    <a href="details-jardinage.html" target="_blank">
+                                        <img src="images/jardinage.jpg" class="card-img-top" alt="Jardinage">
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Jardinage et Écologie</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 6 -->
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="card border-0 shadow-lg">
+                                <div class="img-container">
+                                    <a href="details-observation-oiseaux.html" target="_blank">
+                                        <img src="images/oiseaux.jpg" class="card-img-top" alt="Observation des Oiseaux">
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Observation des Oiseaux</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Contrôles -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#activitySlider" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Précédent</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#activitySlider" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Suivant</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+       
+
+
+
+
+
+
+<!-- Section de la carte -->
+<!-- <section class="map">
+    <h2 class="text-center mb-4">Trouvez-nous ici</h2>
+    <div class="map-container">
+        <div style="text-align: center; margin: 20px 0;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.3756846267175!2d-6.836505884872691!3d34.02088228060073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1aaf0639ffbc61%3A0x2939623b678c50f7!2s123%20Rue%20de%20la%20Campagne%2C%20Rabat%2C%20Maroc!5e0!3m2!1sen!2sus!4v1696699651823!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+    </div>
+</section> -->
+
+<!-- Footer -->
+<footer id="footer">
+    <div class="container footer-content">
+        <div class="row">
+            <!-- Section Contact -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h4>Contactez-nous</h4>
+                <p><strong>Téléphone :</strong> +212 6 00 00 00 00</p>
+                <p><strong>Adresse :</strong> 123 Rue de la Campagne, Rabat, Maroc</p>
+            </div>
+
+            <!-- Section Liens Rapides -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h4>Liens Rapides</h4>
+                <ul class="list-unstyled">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
+                    <li><a data-toggle="modal" data-target="#reservationModalWithGarden" data-animation="fadeInUp" data-delay="800ms" href="#" class="" style="animation-delay: 800ms; opacity: 1;">Réservation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Section Réseaux Sociaux -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h4>Suivez-nous</h4>
+                <ul class="list-unstyled d-flex">
+                    <li class="me-3"><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                    <li class="me-3"><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
+                    <li class="me-3"><a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom text-center mt-4">
+            <p>© 2024 Ferme Pédagogique. Tous droits réservés.</p>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Modal -->
+<div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="reservationModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="reservationModalLabel">Réservation</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Zone pour le message de confirmation -->
+                <div id="confirmationMessage" class="alert alert-success" style="display:none;"></div>
+
+                <form id="reservationForm">
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emaill">Email</label>
+                        <input type="email" class="form-control" id="emaill" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" class="form-control" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date de Réservation</label>
+                        <input type="date" class="form-control" id="date" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Soumettre</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JavaScript -->
+<script>
+    document.getElementById('reservationForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Empêche le rechargement de la page
+
+        // Récupération des valeurs des champs
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('emaill').value; // Utilisation de 'emaill' pour le champ email
+        const phone = document.getElementById('phone').value;
+        const date = document.getElementById('date').value;
+
+        // Affichage du message de confirmation au-dessus du formulaire
+        const confirmationMessage = document.getElementById('confirmationMessage');
+        confirmationMessage.style.display = 'block'; // Rendre le message visible
+        confirmationMessage.innerHTML = `Merci <strong>${name}</strong>, votre réservation pour le <strong>${date}</strong> a été soumise avec succès. Nous vous contacterons bientôt à <strong>${email}</strong>.`;
+
+        // Réinitialise le formulaire
+        this.reset();
+    });
+</script>
+
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybJ5TzT6jH6fD3TfWm5kZ1kLmnpO/zL7wPE9KuJlVefRdB+l" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-OgVRvnYzg3A8Kjjs2Z1nRuNTRaZTqC9MNg+j8gJXV7vqG6zJwKxZlN1V8U5x8+Rm" crossorigin="anonymous"></script>
+</body>
+</html>

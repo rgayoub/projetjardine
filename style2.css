@@ -1,0 +1,159 @@
+.contact-container {
+    display: flex; /* Utilise flexbox pour aligner le formulaire et le calendrier */
+    justify-content: space-between; /* Espacement entre les deux colonnes */
+    max-width: 1200px; /* Largeur maximale du conteneur */
+    margin: 0 auto; /* Centre le conteneur */
+    padding: 30px;
+}
+
+.contact-form-container,
+.calendar-container {
+    flex: 1; /* Chaque conteneur prend une part égale de l'espace */
+    margin: 10px; /* Espacement entre les colonnes */
+    background-color: #fff; /* Couleur de fond blanche */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    padding: 20px; /* Espacement intérieur */
+}
+
+h2 {
+    text-align: center; /* Centre le titre */
+    color: #abc233; /* Couleur du texte (vert) */
+    margin-bottom: 20px; /* Espacement sous le titre */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column; /* Aligne les champs en colonne */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Espacement entre les groupes de champs */
+}
+
+label {
+    font-weight: bold; /* Met les étiquettes en gras */
+    color:black; /* Couleur des étiquettes */
+    display: block; /* Affichage en bloc pour prendre toute la largeur */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Largeur pleine */
+    padding: 15px; /* Espacement intérieur */
+    border: 1px solid #ccc; /* Bordure autour des champs */
+    border-radius: 4px; /* Coins arrondis */
+    font-size: 16px; /* Taille de la police */
+    transition: border-color 0.3s; /* Transition pour le changement de bordure */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #abc233; /* Couleur de bordure au focus */
+    outline: none; /* Retire le contour par défaut */
+}
+
+.submit-button {
+    background-color: #abc233; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    padding: 12px; /* Espacement intérieur */
+    border-radius: 4px; /* Coins arrondis */
+    cursor: pointer; /* Curseur en forme de main */
+    transition: background-color 0.3s; /* Transition pour le changement de couleur */
+    font-size: 16px; /* Taille de la police du bouton */
+}
+
+.submit-button:hover {
+    background-color: #8d9c2e; /* Couleur de fond au survol (variation de la couleur principale) */
+}
+
+.contact-info {
+    margin-top: 30px; /* Espacement au-dessus des informations de contact */
+    text-align: center; /* Centre les informations de contact */
+}
+
+.contact-info h3 {
+    margin-bottom: 10px; /* Espacement sous le titre des infos */
+    color: #abc233; /* Couleur du texte (vert) */
+}
+
+.contact-info ul {
+    list-style: none; /* Pas de puces */
+    padding: 0; /* Pas de padding */
+}
+
+.contact-info li {
+    margin-bottom: 10px; /* Espacement entre les lignes */
+    color: #7f8c8d; /* Couleur grise pour les informations */
+}
+
+.required {
+    color: red; /* Couleur rouge pour les champs obligatoires */
+}
+
+.calendar {
+    margin-top: 20px; /* Espacement au-dessus du calendrier */
+}
+
+.wp-calendar-table {
+    width: 100%; /* Largeur pleine du calendrier */
+    border-collapse: collapse; /* Fusion des bordures */
+}
+
+.wp-calendar-table th,
+.wp-calendar-table td {
+    border: 1px solid #ccc; /* Bordures autour des cellules */
+    padding: 10px; /* Espacement intérieur des cellules */
+    text-align: center; /* Centre le texte dans les cellules */
+}
+
+#today {
+    background-color: #abc233; /* Couleur de fond pour la date actuelle */
+    color: white; /* Couleur du texte pour la date actuelle */
+}
+.description-card {
+    background-color: #f9f9f9; /* Couleur de fond */
+    border: 1px solid #ddd; /* Bordure */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.description-card p {
+    font-family: 'Poppins', sans-serif; /* Choix de la police */
+    font-size: 1.1rem; /* Taille de police */
+    color: #333; /* Couleur du texte */
+    line-height: 1.6; /* Interligne */
+}
+
+
+
+/* Style de la section galerie */
+.gallery-section {
+    background-color: #f9f9f9; /* Couleur de fond clair */
+}
+
+.gallery-section h2 {
+    font-family: 'Poppins', sans-serif;
+    color:black; /* Couleur pistache pour le titre */
+    font-weight: 200;
+    margin-bottom: 30px;
+}
+
+.gallery-item img {
+    transition: transform 0.3s ease; /* Effet zoom */
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05); /* Zoom au survol */
+    cursor: pointer;
+}
+/* Style pour les images de la galerie */
+.gallery-section .gallery-item img {
+    width: 100%;
+    height: auto;
+    max-height: 300px; /* Ajuste la hauteur maximale pour uniformiser les images */
+    object-fit: cover; /* Assure que l'image garde son ratio tout en occupant l'espace */
+}
